@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mini Search Engine</title>
+    </head>
+    <body>
+        <h1>Search Engine</h1>
+        <form method-"GET">
+            <input type="text" name="q" placeholder="Enter search query" value="{{query or ''}}" autofocus>
+            <input type="submit" value="Search">
+        </form>
+
+        {% if results is not none %}
+            <h2>Results for "{{query}}":</h2>
+            {% if results %}
+                <ul>
+                    {% for file in results %}
+                        <li>{{file}}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No results found.</p>
+            {% endif %}
+        {% endif %}
+    </body>
+</html>

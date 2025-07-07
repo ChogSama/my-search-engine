@@ -1,0 +1,138 @@
+{
+  "page": [
+    "data\\localhost_8000_0.txt",
+    "data\\localhost_8000_1.txt",
+    "data\\localhost_8000_2.txt",
+    "data\\localhost_8000_3.txt",
+    "data\\localhost_8000_4.txt"
+  ],
+  "1": [
+    "data\\localhost_8000_0.txt",
+    "data\\localhost_8000_4.txt"
+  ],
+  "welcome": [
+    "data\\localhost_8000_0.txt"
+  ],
+  "to": [
+    "data\\localhost_8000_0.txt",
+    "data\\localhost_8000_1.txt",
+    "data\\localhost_8000_2.txt",
+    "data\\localhost_8000_3.txt",
+    "data\\localhost_8000_4.txt"
+  ],
+  "this": [
+    "data\\localhost_8000_0.txt",
+    "data\\localhost_8000_2.txt"
+  ],
+  "links": [
+    "data\\localhost_8000_0.txt"
+  ],
+  "2": [
+    "data\\localhost_8000_0.txt",
+    "data\\localhost_8000_1.txt"
+  ],
+  "go": [
+    "data\\localhost_8000_0.txt",
+    "data\\localhost_8000_1.txt",
+    "data\\localhost_8000_2.txt",
+    "data\\localhost_8000_3.txt",
+    "data\\localhost_8000_4.txt"
+  ],
+  "first": [
+    "data\\localhost_8000_1.txt",
+    "data\\localhost_8000_3.txt"
+  ],
+  "item": [
+    "data\\localhost_8000_1.txt",
+    "data\\localhost_8000_4.txt"
+  ],
+  "second": [
+    "data\\localhost_8000_1.txt",
+    "data\\localhost_8000_3.txt"
+  ],
+  "3": [
+    "data\\localhost_8000_1.txt",
+    "data\\localhost_8000_2.txt"
+  ],
+  "is": [
+    "data\\localhost_8000_2.txt"
+  ],
+  "a": [
+    "data\\localhost_8000_2.txt"
+  ],
+  "bold": [
+    "data\\localhost_8000_2.txt"
+  ],
+  "statement": [
+    "data\\localhost_8000_2.txt"
+  ],
+  "an": [
+    "data\\localhost_8000_2.txt"
+  ],
+  "emphasized": [
+    "data\\localhost_8000_2.txt"
+  ],
+  "word": [
+    "data\\localhost_8000_2.txt"
+  ],
+  "4": [
+    "data\\localhost_8000_2.txt",
+    "data\\localhost_8000_3.txt"
+  ],
+  "paragraph": [
+    "data\\localhost_8000_3.txt"
+  ],
+  "with": [
+    "data\\localhost_8000_3.txt"
+  ],
+  "some": [
+    "data\\localhost_8000_3.txt"
+  ],
+  "text": [
+    "data\\localhost_8000_3.txt"
+  ],
+  "5": [
+    "data\\localhost_8000_3.txt",
+    "data\\localhost_8000_4.txt"
+  ],
+  "table": [
+    "data\\localhost_8000_4.txt"
+  ],
+  "example": [
+    "data\\localhost_8000_4.txt"
+  ],
+  "price": [
+    "data\\localhost_8000_4.txt"
+  ],
+  "apple": [
+    "data\\localhost_8000_4.txt",
+    "data\\test1.txt",
+    "data\\test_case.txt",
+    "data\\test_file1.txt",
+    "data\\test_punct.txt",
+    "data\\test_simple.txt",
+    "data\\test_unique.txt",
+    "data\\text_repeat.txt"
+  ],
+  "banana": [
+    "data\\localhost_8000_4.txt",
+    "data\\test1.txt",
+    "data\\test2.txt",
+    "data\\test_file1.txt",
+    "data\\test_file2.txt",
+    "data\\test_punct.txt",
+    "data\\test_unique.txt",
+    "data\\text_repeat.txt"
+  ],
+  "0": [
+    "data\\localhost_8000_4.txt"
+  ],
+  "cherry": [
+    "data\\test_file2.txt",
+    "data\\test_punct.txt",
+    "data\\test_unique.txt"
+  ],
+  "date": [
+    "data\\test_punct.txt"
+  ]
+}
