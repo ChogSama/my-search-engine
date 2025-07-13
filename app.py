@@ -56,15 +56,14 @@ def search(index, query):
         snippet = ""
         text_lower = text.lower()
         # Find first occurence of any query word
-        for word in words:
-            min_idx = min((text_lower.find(word) for word in words if text_lower.find(word) != -1), default = 0)
-            start = max(0, min_idx - 30)
-            end = min(len(text), min_idx + 60)
-            snippet = text[start:end].replace("\n", " ").strip()
+        min_idx = min((text_lower.find(word) for word in words if text_lower.find(word) != -1), default = 0)
+        start = max(0, min_idx - 30)
+        end = min(len(text), min_idx + 60)
+        snippet = text[start:end].replace("\n", " ").strip()
 
-            # Highlight query words in this snippet
-            for w in words:
-                snippet = re.sub(f"(?i)({re.escape(w)})", r"<mark>\1</mark>", snippet)
+        # Highlight query words in this snippet
+        for word in words:
+            snippet = re.sub(f"(?i)({re.escape(word)})", r"<mark>\1</mark>", snippet)
 
         scored_results.append((filepath, snippet, score))
 
