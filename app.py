@@ -46,12 +46,13 @@ def search(index, query):
 
     # Compute intersection of all result sets
     matching_files = set.intersection(*result_sets)
-    results = []
+    scored_results = []
 
     for filepath in matching_files:
         with open(filepath, "r", encoding = "utf-8") as f:
             text = f.read()
 
+        score = sum(text.lower().count(word) for word in words)
         snippet = ""
         snippets = []
         text_lower = text.lower()
@@ -69,9 +70,11 @@ def search(index, query):
 
                 snippets.append(snippet)
 
-        results.append((filepath, snippets))
+        scored_results.append((filepath, snippets, score))
 
-    return results
+    scored_results.sort(key = lambda x: x[2], reverse = True)
+
+    return [(filepath, snippets) for filepath, snippets, score in scored_results]
 
 HTML_TEMPLATE = """
 <!DOCTYPE html>
