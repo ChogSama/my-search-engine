@@ -89,17 +89,15 @@ HTML_TEMPLATE = """
                         <button type="submit" class="btn btn-primary">Search</button>
                     </form>
 
-                    {% if results is not none %}
+                    {% if scored_results is not none %}
                         <h3>Results for "<em>{{query}}</em>":</h3>
-                        {% if results %}
+                        {% if scored_results %}
                             <ul class="list-group">
-                                {% for file, snippets in results %}
+                                {% for file, snippet in scored_results %}
                                     <li class="list-group-item">
                                         <strong>{{file}}</strong>
                                         <ul class="mt-2>
-                                            {% for snippet in snippets %}
-                                                <li class="text-muted">{{snippet|safe}}</li>
-                                            {% endfor %}
+                                            <li class="text-muted">{{snippet|safe}}</li>
                                         </ul>
                                     </li>
                                 {% endfor %}
