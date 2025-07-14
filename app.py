@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template_string
+from flask import Flask, request, render_template_string, send_from_directory
 import os
 import re
 import json
@@ -96,6 +96,10 @@ HTML_TEMPLATE = """
                                 {% for file, snippet in scored_results %}
                                     <li class="list-group-item">
                                         <strong>{{file}}</strong>
+                                        <div class="mt-2">
+                                            <a href="/preview/{{file|replace('data/', '')}}" class="btn btn-sm btn-outline-secondary me-2" target="_blank">Preview</a>
+                                            <a href="/preview/{{file|replace('data/', '')}}" download class="btn btn-sm btn-outline-success">Download</a>
+                                        </div>
                                         <ul class="mt-2">
                                             <li class="text-muted">{{snippet|safe}}</li>
                                         </ul>
@@ -114,6 +118,9 @@ HTML_TEMPLATE = """
 """
 
 @app.route("/", methods=["GET"])
+@app.route("/preview/<path:filename>")
+def preview_file(filename):
+    return send_from_directory("static/data", filename)
 def home():
     query = request.args.get("q")
     scored_results = None
