@@ -118,6 +118,9 @@ HTML_TEMPLATE = """
 """
 
 @app.route("/", methods=["GET"])
+@app.route("/preview/")
+def preview_missing():
+    return abort(400, description = "No filename provided.")
 @app.route("/preview/<path:filename>")
 def preview_file(filename):
     filepath = os.path.join("static", "data", filename)
