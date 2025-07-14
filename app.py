@@ -96,7 +96,7 @@ HTML_TEMPLATE = """
                                 {% for file, snippet in scored_results %}
                                     <li class="list-group-item">
                                         <strong>{{file}}</strong>
-                                        <ul class="mt-2>
+                                        <ul class="mt-2">
                                             <li class="text-muted">{{snippet|safe}}</li>
                                         </ul>
                                     </li>
@@ -118,8 +118,8 @@ def home():
     query = request.args.get("q")
     results = None
     if query:
-        results = search(index, query)
-    return render_template_string(HTML_TEMPLATE, query = query, results = results)
+        scored_results = search(index, query)
+    return render_template_string(HTML_TEMPLATE, query = query, scored_results = scored_results)
 
 if __name__ == "__main__":
     app.run(debug = True)
