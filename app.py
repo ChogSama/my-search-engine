@@ -97,8 +97,10 @@ HTML_TEMPLATE = """
                                     <li class="list-group-item">
                                         <strong>{{file}}</strong>
                                         <div class="mt-2">
-                                            <a href="/preview/{{file|replace('data/', '')}}" class="btn btn-sm btn-outline-secondary me-2" target="_blank">Preview</a>
-                                            <a href="/preview/{{file|replace('data/', '')}}" download class="btn btn-sm btn-outline-success">Download</a>
+                                            {% if file %}
+                                                <a href="/preview/{{file|replace('data/', '')}}" class="btn btn-sm btn-outline-secondary me-2" target="_blank">Preview</a>
+                                                <a href="/preview/{{file|replace('data/', '')}}" download class="btn btn-sm btn-outline-success">Download</a>
+                                            {% endif %}
                                         </div>
                                         <ul class="mt-2">
                                             <li class="text-muted">{{snippet|safe}}</li>
