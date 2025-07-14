@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template_string, send_from_directory
+from flask import Flask, request, render_template_string, send_from_directory, abort
 import os
 import re
 import json
@@ -120,6 +120,9 @@ HTML_TEMPLATE = """
 @app.route("/", methods=["GET"])
 @app.route("/preview/<path:filename>")
 def preview_file(filename):
+    filepath = os.path.join("static", "data", filename)
+    if not os.path.isfile(filepath):
+        return abort(404, description = "File not found")
     return send_from_directory("static/data", filename)
 def home():
     query = request.args.get("q")
