@@ -116,7 +116,7 @@ HTML_TEMPLATE = """
 @app.route("/", methods=["GET"])
 def home():
     query = request.args.get("q")
-    results = None
+    scored_results = None
     if query:
         scored_results = search(index, query)
     return render_template_string(HTML_TEMPLATE, query = query, scored_results = scored_results)
