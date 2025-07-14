@@ -97,9 +97,12 @@ HTML_TEMPLATE = """
                                     <li class="list-group-item">
                                         <strong>{{file}}</strong>
                                         <div class="mt-2">
-                                            {% if file %}
-                                                <a href="/preview/{{file|replace('data/', '')}}" class="btn btn-sm btn-outline-secondary me-2" target="_blank">Preview</a>
-                                                <a href="/preview/{{file|replace('data/', '')}}" download class="btn btn-sm btn-outline-success">Download</a>
+                                            {% if file and 'data/' in file %}
+                                                {% set filename = file.replace('data/', '') %}
+                                                <a href="/preview/{{filename}}" class="btn btn-sm btn-outline-secondary me-2" target="_blank">Preview</a>
+                                                <a href="/preview/{{filename}}" download class="btn btn-sm btn-outline-success">Download</a>
+                                            {% else %}
+                                                <p><em>Invalid file path</em></p>
                                             {% endif %}
                                         </div>
                                         <ul class="mt-2">
